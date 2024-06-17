@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入框</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="input-container">
+        <div class="input-group">
+            <label for="inputA">第一把：</label>
+            <input type="text" id="inputA" placeholder="请输入数字">
+            <p id="remainderA" class="result"></p>
+        </div>
+
+        <div class="input-group">
+            <label for="inputB">第二把：</label>
+            <input type="text" id="inputB" placeholder="请输入数字">
+            <p id="remainderB" class="result"></p>
+        </div>
+
+        <div class="input-group">
+            <label for="inputC">第三把：</label>
+            <input type="text" id="inputC" placeholder="请输入数字">
+            <p id="remainderC" class="result"></p>
+        </div>
+
+        <div class="input-group">
+            <label for="inputHour">時辰：</label>
+            <input type="text" id="inputHour" placeholder="请输入數字">
+            <p id="remainderHour" class="result"></p>
+        </div>
+
+        <button onclick="calculate()">計算</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

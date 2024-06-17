@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif; /* 设置字体为 Arial 或者系统默认的 sans-serif 字体 */
+    background-color: #f0f0f0; /* 设置背景色为浅灰色 */
+}
+
+.input-container {
+    width: 300px; /* 设置输入容器的宽度为 300 像素 */
+    margin: px auto; /* 上下边距为 20 像素，左右自动居中 */
+}
+
+.input-group {
+    margin-bottom: 10px; /* 设置输入组之间的下边距为 10 像素 */
+    display: flex; /* 使用弹性布局 */
+    justify-content: space-between; /* 在输入组内部左右对齐 */
+}
+
+.input-group label {
+    flex: 0 0 80px; /* 设置标签的固定宽度为 80 像素 */
+}
+
+.input-group input[type="text"] {
+    flex: 1; /* 输入框自动填充剩余空间 */
+    padding: 8px; /* 设置内边距为 8 像素 */
+    border: 2px solid #ccc; /* 设置边框为 1 像素的灰色实线边框 */
+    border-radius: 30px; /* 设置边框圆角为 3 像素 */
+    font-size: 14px; /* 设置字体大小为 14 像素 */
+}
+
+.input-group .result {
+    flex: 0 0 100px; /* 设置结果框的固定宽度为 100 像素 */
+    margin-left: 10px; /* 左边距为 10 像素 */
+    padding: 5px; /* 设置内边距为 5 像素 */
+    border: 1px solid #ccc; /* 设置边框为 1 像素的灰色实线边框 */
+    border-radius: 3px; /* 设置边框圆角为 3 像素 */
+    font-size: 14px; /* 设置字体大小为 14 像素 */
+    text-align: center; /* 文本居中显示 */
+}
+
+button {
+    width: 100%; /* 按钮宽度填满容器 */
+    padding: 10px; /* 设置内边距为 10 像素 */
+    background-color: #007bff; /* 设置背景色为蓝色 */
+    color: #fff; /* 设置字体颜色为白色 */
+    border: none; /* 去除边框 */
+    border-radius: 3px; /* 设置圆角为 3 像素 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+}
+
+button:hover {
+    background-color: #0056b3; /* 悬停时背景色变为深蓝色 */
+}

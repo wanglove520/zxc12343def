@@ -1,0 +1,82 @@
+function calculate() {
+    var inputA = document.getElementById("inputA").value;
+    var inputB = document.getElementById("inputB").value;
+    var inputC = document.getElementById("inputC").value;
+    var inputHour = document.getElementById("inputHour").value;
+
+    var numberA = parseFloat(inputA);
+    var numberB = parseFloat(inputB);
+    var numberC = parseFloat(inputC);
+    var hour = parseFloat(inputHour);
+
+    // Calculate remainderA
+    if (!isNaN(numberA)) {
+        var remainderA = numberA % 8;
+        if (remainderA === 0) {
+            remainderA = 8; // 如果余数为0，则显示为8
+        }
+        document.getElementById("remainderA").textContent = "本卦上掛：" + remainderA;
+    } else {
+        document.getElementById("remainderA").textContent = "請輸入有效的數字。";
+    }
+
+    // Calculate remainderB
+    if (!isNaN(numberB) && !isNaN(numberC)) {
+        var sumBC = numberB + numberC;
+        var remainderB = sumBC % 8;
+        if (remainderB === 0) {
+            remainderB = 8; // 如果余数为0，则显示为8
+        }
+        document.getElementById("remainderB").textContent = "本卦下掛：" + remainderB;
+    } else {
+        document.getElementById("remainderB").textContent = "請輸入有效的數字。";
+    }
+
+    // Calculate remainderHour as float
+    if (!isNaN(hour)) {
+        var remainderHour;
+        if (hour >= 23 || hour < 1) {
+            remainderHour = 1;
+        } else if (hour >= 1 && hour < 3) {
+            remainderHour = 2;
+        } else if (hour >= 3 && hour < 5) {
+            remainderHour = 3;
+        } else if (hour >= 5 && hour < 7) {
+            remainderHour = 4;
+        } else if (hour >= 7 && hour < 9) {
+            remainderHour = 5;
+        } else if (hour >= 9 && hour < 11) {
+            remainderHour = 6;
+        } else if (hour >= 11 && hour < 13) {
+            remainderHour = 7;
+        } else if (hour >= 13 && hour < 15) {
+            remainderHour = 8;
+        } else if (hour >= 15 && hour < 17) {
+            remainderHour = 9;
+        } else if (hour >= 17 && hour < 19) {
+            remainderHour = 10;
+        } else if (hour >= 19 && hour < 21) {
+            remainderHour = 11;
+        } else if (hour >= 21 && hour < 23) {
+            remainderHour = 12;
+        } else {
+            remainderHour = "請重新輸入";
+        }
+        document.getElementById("remainderHour").textContent = "時辰數字：" + remainderHour;
+    } else {
+        document.getElementById("remainderHour").textContent = "請輸入有效的數字。";
+    }
+
+    // Calculate total sum and remainder when divided by 6
+    if (!isNaN(numberA) && !isNaN(numberB) && !isNaN(numberC)&&!isNaN(hour) ) {
+        var totalSum = numberA + numberB + numberC + remainderHour;
+        var remainderTotal = totalSum % 6;
+        if (remainderTotal === 0) {
+            remainderTotal = 6; // 如果余数为0，则显示为6
+        }
+        document.getElementById("remainderC").textContent = "變爻於：" + remainderTotal +"樓";
+    } else {
+        document.getElementById("remainderC").textContent = "";
+        alert("請輸入有效的數字。");
+    }
+}
